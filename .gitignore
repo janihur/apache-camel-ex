@@ -1,2 +1,8 @@
-target/
+.settings/
+.vscode/
 dist/
+target/
+
+.classpath
+.factorypath
+.project
