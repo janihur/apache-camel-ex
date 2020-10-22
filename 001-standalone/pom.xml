@@ -6,9 +6,25 @@
     <artifactId>camel3-ex</artifactId>
     <version>1.0</version>
   </parent>
-  
+
   <artifactId>001-standalone</artifactId>
   <packaging>jar</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>outbox</directory>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
   <dependencies>
     <!-- CAMEL -->

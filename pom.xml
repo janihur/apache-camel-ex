@@ -37,7 +37,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <mainClass>Main</mainClass>
+          <mainClass>App</mainClass>
           <cleanupDaemonThreads>false</cleanupDaemonThreads>
           <includePluginDependencies>false</includePluginDependencies>
         </configuration>

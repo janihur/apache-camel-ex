@@ -7,7 +7,7 @@ import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
         CamelContext context = new DefaultCamelContext();
         context.setStreamCaching(true);
