@@ -9,14 +9,16 @@
 
   <modules>
     <module>001-standalone</module>
+    <module>002-camel-main</module>
   </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
-    <camelVersion>3.4.3</camelVersion>
-    <log4jVersion>2.13.3</log4jVersion>
+    <camel.version>3.4.3</camel.version>
+    <junit.version>5.7.0</junit.version>
+    <log4j.version>2.13.3</log4j.version>
   </properties>
 
   <build>
@@ -30,6 +32,12 @@
             <arg>-Xlint:all,-options,-path</arg>
           </compilerArgs>
         </configuration>
+      </plugin>
+      <!-- https://junit.org/junit5/docs/snapshot/user-guide/#running-tests-build-maven -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
       </plugin>
       <!-- mvn compile exec:java -->
       <plugin>
@@ -45,25 +53,43 @@
     </plugins>
   </build>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <!-- LOGGING -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
       <scope>runtime</scope>
-      <version>${log4jVersion}</version>
+      <version>${log4j.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <scope>runtime</scope>
-      <version>${log4jVersion}</version>
+      <version>${log4j.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-slf4j-impl</artifactId>
       <scope>runtime</scope>
-      <version>${log4jVersion}</version>
+      <version>${log4j.version}</version>
+    </dependency>
+    <!-- TESTING -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>
