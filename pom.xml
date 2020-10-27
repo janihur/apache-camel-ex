@@ -10,6 +10,7 @@
   <modules>
     <module>001-standalone</module>
     <module>002-camel-main</module>
+    <module>003-openapi</module>
   </modules>
 
   <properties>

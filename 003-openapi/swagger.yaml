@@ -1,0 +1,32 @@
+swagger: '2.0'
+
+info:
+  version: 1.0.0
+  title: Camel3 OpenAPI Example
+  description: An example that demonstrates an API-first development approach.
+  termsOfService: If broken you can keep all the pieces.
+  contact:
+    name: Jani Hur
+    url:  https://jani-hur.net
+    email: webmaster@jani-hur.net 
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+
+basePath: /api101
+
+paths:
+  /hello:
+    get:
+      description: Basic Hello World
+      responses:
+        200:
+          description: A basic greetings structure.
+          schema:
+            type: array
+            items:
+              required:
+                - hello
+              properties:
+                hello:
+                  type: string
