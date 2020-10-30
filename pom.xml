@@ -11,6 +11,7 @@
     <module>001-standalone</module>
     <module>002-camel-main</module>
     <module>003-openapi</module>
+    <module>004-timer</module>
   </modules>
 
   <properties>
