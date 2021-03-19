@@ -30,3 +30,22 @@ Try it:
 $ curl http://0.0.0.0:8081/api101/hello
 {hello: "Hello, World!"}
 ```
+
+`004-timer`
+-----------
+
+[Timer](https://camel.apache.org/components/latest/timer-component.html) scheduler component example.
+
+`005-xslt`
+----------
+
+How to convert XML messages with [XSLT](https://camel.apache.org/components/latest/xslt-component.html) component and how to unit test the transformation with [XMLUnit](https://www.xmlunit.org/)'s [XSLT support](https://github.com/xmlunit/user-guide/wiki/XSLT-Support).
+
+Both
+
+```
+mvn compile exec:java
+mvn test
+```
+
+works.

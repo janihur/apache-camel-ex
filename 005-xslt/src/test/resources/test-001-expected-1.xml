@@ -1,0 +1,4 @@
+<jh2:message xmlns:jh2="https://jani-hur.net/two">
+    <jh2:line>first line</jh2:line>
+    <jh2:line>second line</jh2:line>
+</jh2:message>

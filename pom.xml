@@ -12,15 +12,18 @@
     <module>002-camel-main</module>
     <module>003-openapi</module>
     <module>004-timer</module>
+    <module>005-xslt</module>
   </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+
     <camel.version>3.4.3</camel.version>
     <junit.version>5.7.0</junit.version>
     <log4j.version>2.13.3</log4j.version>
+    <xmlunit.version>2.8.2</xmlunit.version>
   </properties>
 
   <build>
