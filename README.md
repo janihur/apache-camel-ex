@@ -39,7 +39,7 @@ $ curl http://0.0.0.0:8081/api101/hello
 `005-xslt`
 ----------
 
-How to convert XML messages with [XSLT](https://camel.apache.org/components/latest/xslt-component.html) component and how to unit test the transformation with [XMLUnit](https://www.xmlunit.org/)'s [XSLT support](https://github.com/xmlunit/user-guide/wiki/XSLT-Support).
+How to convert XML messages with [XSLT](https://camel.apache.org/components/latest/xslt-component.html) component and how to unit test the transformation with [XMLUnit](https://www.xmlunit.org/) [XSLT support](https://github.com/xmlunit/user-guide/wiki/XSLT-Support).
 
 Both
 
@@ -49,3 +49,8 @@ mvn test
 ```
 
 works.
+
+`006-subroute-exception`
+------------------------
+
+Subroute exception propagation example.
