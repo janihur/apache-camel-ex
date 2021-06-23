@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s="http://example.com/service/v1" xmlns:shared="http://example.com/shared/v1">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<s:serviceRequest>
+			<shared:trackingHeader>
+				<shared:transactionId>20201030_130412_12345</shared:transactionId>
+				<shared:sessionId>SESSION_ID</shared:sessionId>
+				<shared:clientId>CLIENT_ID</shared:clientId>
+			</shared:trackingHeader>
+			<s:order>
+			</s:order>
+		</s:serviceRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

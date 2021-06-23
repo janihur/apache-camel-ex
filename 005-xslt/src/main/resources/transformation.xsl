@@ -9,14 +9,20 @@
 	<xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="yes"/>
 	<xsl:strip-space elements="*"/>
 
-	<xsl:param name="EXTRA_LINE"/>
+	<xsl:param name="EXTRA_LINE_1"/>
+	<xsl:param name="EXTRA_LINE_2"/>
 
 	<xsl:template match="jh1:message">
 		<jh2:message>
 			<xsl:apply-templates/>
-			<xsl:if test="boolean($EXTRA_LINE)">
+			<xsl:if test="boolean($EXTRA_LINE_1)">
 				<jh2:line>
-					<xsl:value-of select="$EXTRA_LINE"/>
+					<xsl:value-of select="$EXTRA_LINE_1"/>
+				</jh2:line>
+			</xsl:if>
+			<xsl:if test="boolean($EXTRA_LINE_2)">
+				<jh2:line>
+					<xsl:value-of select="$EXTRA_LINE_2"/>
 				</jh2:line>
 			</xsl:if>
 		</jh2:message>

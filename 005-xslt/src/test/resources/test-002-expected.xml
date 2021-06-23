@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cre="urn:microsoft-dynamics-schemas/codeunit/CreateOrder" xmlns:x50="urn:microsoft-dynamics-nav/xmlports/x50004">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<cre:CreateOrder>
+			<cre:orderXML>
+				<x50:trackingHeader>
+					<x50:transactionId>20201030_130412_12345</x50:transactionId>
+					<x50:sessionId>SESSION_ID</x50:sessionId>
+				</x50:trackingHeader>
+				<x50:developmentOptions>
+					<x50:orderingSystem>JANI</x50:orderingSystem>
+				</x50:developmentOptions>
+				<x50:order/>
+			</cre:orderXML>
+			<cre:responseXML/>
+		</cre:CreateOrder>
+	</soapenv:Body>
+</soapenv:Envelope>

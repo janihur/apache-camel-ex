@@ -13,6 +13,7 @@
     <module>003-openapi</module>
     <module>004-timer</module>
     <module>005-xslt</module>
+    <module>006-subroute-exception</module>
   </modules>
 
   <properties>

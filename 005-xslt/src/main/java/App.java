@@ -12,9 +12,10 @@ public class App {
                     from("timer:exampleTimer?repeatCount=1")
                     .routeId("TimerRoute")
                     .log("ROUTE START:")
-                    // all headers can be accessed in XSLT with
-                    // <xsl:param name="EXTRA_LINE"/>
-                    .setHeader("EXTRA_LINE").constant("Text for extra line !")
+                    // all headers and properties can be accessed in XSLT with
+                    // <xsl:param name="EXTRA_LINE_1"/>
+                    .setProperty("EXTRA_LINE_1", constant("Text for extra line 1 !"))
+                    .setHeader("EXTRA_LINE_2", constant("Text for extra line 2 !"))
                     .setBody(method(Util.class, "getMsg1"))
                     .to("xslt:transformation.xsl")
                     .to("direct:logger")
