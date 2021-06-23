@@ -53,4 +53,9 @@ works.
 `006-subroute-exception`
 ------------------------
 
-Subroute exception propagation example.
+Subroute exception propagation examples. Run different cases with `-Dexec.args=` option:
+
+```
+mvn compile exec:java -Dexec.args=1
+mvn compile exec:java -Dexec.args=2
+```
