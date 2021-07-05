@@ -1,0 +1,17 @@
+{
+  "description": "A harmless list of fruits.",
+  "fruits": [
+    {
+      "id": "101",
+      "name": "apple"
+    },
+    {
+      "id": "102",
+      "name": "banana"
+    },
+    {
+      "id": "103",
+      "name": "cherry"
+    }
+  ]
+}

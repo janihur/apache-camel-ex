@@ -59,3 +59,8 @@ Subroute exception propagation examples. Run different cases with `-Dexec.args=`
 mvn compile exec:java -Dexec.args=1
 mvn compile exec:java -Dexec.args=2
 ```
+
+`006-json-marshal`
+------------------
+
+JSON marshal/unmarshal with [JSON Jackson](https://camel.apache.org/components/latest/dataformats/json-jackson-dataformat.html) data format.

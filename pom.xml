@@ -14,6 +14,7 @@
     <module>004-timer</module>
     <module>005-xslt</module>
     <module>006-subroute-exception</module>
+    <module>007-json-marshal</module>
   </modules>
 
   <properties>
