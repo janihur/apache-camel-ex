@@ -22,15 +22,15 @@ public class App {
                         "\"description\": \"A harmless list of fruits.\",\n" +
                         "  \"fruits\": [\n" +
                         "    {\n" +
-                        "      \"id\": \"101\",\n" +
+                        "      \"id\": 101,\n" +
                         "      \"name\": \"apple\"\n" +
                         "    },\n" +
                         "    {\n" +
-                        "      \"id\": \"102\",\n" +
+                        "      \"id\": 102,\n" +
                         "      \"name\": \"banana\"\n" +
                         "    },\n" +
                         "    {\n" +
-                        "      \"id\": \"103\",\n" +
+                        "      \"id\": 103,\n" +
                         "      \"name\": \"cherry\"\n" +
                         "    }\n" +
                         "  ]\n" +
