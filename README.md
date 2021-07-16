@@ -60,7 +60,21 @@ mvn compile exec:java -Dexec.args=1
 mvn compile exec:java -Dexec.args=2
 ```
 
-`006-json-marshal`
+`007-json-marshal`
 ------------------
 
 JSON marshal/unmarshal with [JSON Jackson](https://camel.apache.org/components/latest/dataformats/json-jackson-dataformat.html) data format.
+
+`008-test-mock`
+---------------
+
+How to unit test [existing routes](https://camel.apache.org/manual/latest/testing.html#Testing-Testingexistingroutes) with [Mock](https://camel.apache.org/components/latest/mock-component.html) component and [adviseWith](https://cwiki.apache.org/confluence/display/CAMEL/AdviceWith).
+
+Both
+
+```
+mvn compile exec:java
+mvn test
+```
+
+works, but of course `mvn test` is more important.
