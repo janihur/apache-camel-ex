@@ -16,6 +16,7 @@
     <module>006-subroute-exception</module>
     <module>007-json-marshal</module>
     <module>008-test-mock</module>
+    <module>009-calling-paginated-api</module>
   </modules>
 
   <properties>
@@ -23,7 +24,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <camel.version>3.4.3</camel.version>
+    <camel.version>3.11.3</camel.version>
     <log4j.version>2.13.3</log4j.version>
     <xmlunit.version>2.8.2</xmlunit.version>
   </properties>

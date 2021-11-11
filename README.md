@@ -1,7 +1,9 @@
 Apache Camel 3 Code Examples
 ============================
 
-Currently, used Camel version: 3.4.3
+Currently used Camel version: 3.11.3
+
+All examples might not compile when the Camel version have been changed.
 
 How to compile and run the examples (unless otherwise noted):
 
@@ -78,3 +80,13 @@ mvn test
 ```
 
 works, but of course `mvn test` is more important.
+
+`009-calling-paginated-api`
+---------------------------
+
+How to call paginated API for all pages and aggregates the results. Requires [standalone](http://wiremock.org/docs/running-standalone/) [Wiremock](http://wiremock.org/) running:
+
+```
+--root-dir wiremock/case-01
+--root-dir wiremock/case-02
+```

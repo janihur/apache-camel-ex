@@ -1,0 +1,74 @@
+{
+  "mappings": [
+    {
+      "scenarioName": "Pagination Scenario #2 - Page 1/5",
+      "request": {
+        "method": "GET",
+        "urlPath": "/page/1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "bodyFileName": "page-01.json"
+      }
+    },
+    {
+      "scenarioName": "Pagination Scenario #2 - Page 2/5",
+      "request": {
+        "method": "GET",
+        "urlPath": "/page/2"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "bodyFileName": "page-02.json"
+      }
+    },
+    {
+      "scenarioName": "Pagination Scenario #2 - Page 3/5",
+      "request": {
+        "method": "GET",
+        "urlPath": "/page/3"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "bodyFileName": "page-03.json"
+      }
+    },
+    {
+      "scenarioName": "Pagination Scenario #2 - Page 4/5",
+      "request": {
+        "method": "GET",
+        "urlPath": "/page/4"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "bodyFileName": "page-04.json"
+      }
+    },
+    {
+      "scenarioName": "Pagination Scenario #2 - Page 5/5",
+      "request": {
+        "method": "GET",
+        "urlPath": "/page/5"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "bodyFileName": "page-05.json"
+      }
+    }
+  ]
+}

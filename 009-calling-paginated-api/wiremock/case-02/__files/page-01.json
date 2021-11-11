@@ -1,0 +1,15 @@
+{
+  "next": 2,
+  "previous": null,
+  "count": 2,
+  "results": [
+    {
+      "id": 1,
+      "text": "lorem ipsum"
+    },
+    {
+      "id": 2,
+      "text": "dolor sit"
+    }
+  ]
+}
