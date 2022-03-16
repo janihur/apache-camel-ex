@@ -1,12 +1,13 @@
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.RoutesBuilder;
+import org.apache.camel.builder.AdviceWith;
 import org.apache.camel.builder.AdviceWithRouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.model.ModelCamelContext;
 import org.apache.camel.reifier.RouteReifier;
-import org.apache.camel.test.junit4.CamelTestSupport;
-import org.junit.Test;
+import org.apache.camel.test.junit5.CamelTestSupport;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class Routes3Test extends CamelTestSupport {
     @Test
     public void adviseWith_test1() throws Exception {
         ModelCamelContext mcc = context().adapt(ModelCamelContext.class);
-        RouteReifier.adviceWith(mcc.getRouteDefinition("MainRoute"), mcc, new AdviceWithRouteBuilder() {
+        AdviceWith.adviceWith(mcc.getRouteDefinition("MainRoute"), mcc, new AdviceWithRouteBuilder() {
             @Override
             public void configure() throws Exception {
                 replaceFromWith("direct:testStartRoute");
@@ -68,7 +69,7 @@ public class Routes3Test extends CamelTestSupport {
 
     @Test
     public void adviseWith_test2() throws Exception {
-        RouteReifier.adviceWith(context.getRouteDefinition("MainRoute"), context, new AdviceWithRouteBuilder() {
+        AdviceWith.adviceWith(context.getRouteDefinition("MainRoute"), context, new AdviceWithRouteBuilder() {
             @Override
             public void configure() throws Exception {
                 weaveById("MainRouteSubRoute1").remove();
@@ -93,7 +94,7 @@ public class Routes3Test extends CamelTestSupport {
 
     @Test
     public void adviseWith_test3() throws Exception {
-        AdviceWithRouteBuilder.adviceWith(context(), "MainRoute", a -> {
+        AdviceWith.adviceWith(context, "MainRoute", a -> {
             a.weaveById("MainRouteSubRoute1").remove();
             a.weaveById("MainRouteSubRoute2").remove();
             a.weaveAddLast().to("mock:test3");
