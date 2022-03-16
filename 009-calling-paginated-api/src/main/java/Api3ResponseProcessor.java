@@ -16,7 +16,7 @@ public class Api3ResponseProcessor implements Processor {
     public void process(Exchange exchange) throws Exception {
         // response -----------------------------------------------------------
         String response = exchange.getMessage().getBody(String.class);
-        System.err.println("API3_RESPONSE_AGGREGATOR: (response \"" + response + "\")");
+        System.err.println("API3_RESPONSE_PROCESSOR: (response \"" + response + "\")");
 
         Object document = Configuration.defaultConfiguration().jsonProvider().parse(response);
 
@@ -27,7 +27,7 @@ public class Api3ResponseProcessor implements Processor {
             if (Objects.nonNull(nextInt)) {
                 next = nextInt.toString();
             }
-            System.err.println("API3_RESPONSE_AGGREGATOR: (next \"" + next + "\")");
+            System.err.println("API3_RESPONSE_PROCESSOR: (next \"" + next + "\")");
 
             exchange.setProperty("API3_NEXT_PAGE", next);
         }
@@ -36,7 +36,7 @@ public class Api3ResponseProcessor implements Processor {
         {
             List<Map<String, Object>> newResults = JsonPath.read(document, "$.results");
             for (Map<String, Object> object : newResults) {
-                System.err.println("API3_RESPONSE_AGGREGATOR: (object \"" + object.toString() + "\")");
+                System.err.println("API3_RESPONSE_PROCESSOR: (object \"" + object.toString() + "\")");
             }
 
             @SuppressWarnings("unchecked") List<Map<String, Object>> oldResults =
@@ -54,6 +54,5 @@ public class Api3ResponseProcessor implements Processor {
 
         exchange.getMessage().setBody(null, String.class);
         exchange.getMessage().removeHeaders("Camel*");
-
     }
 }

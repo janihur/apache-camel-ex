@@ -90,3 +90,12 @@ How to call paginated API for all pages and aggregates the results. Requires [st
 --root-dir wiremock/case-01
 --root-dir wiremock/case-02
 ```
+
+`010-routing-java-objects`
+--------------------------
+
+How to route arbitrary Java objects. Uses [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) to process every object in a Java container.
+
+```
+mvn compile exec:java
+```

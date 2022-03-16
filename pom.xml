@@ -17,6 +17,7 @@
     <module>007-json-marshal</module>
     <module>008-test-mock</module>
     <module>009-calling-paginated-api</module>
+    <module>010-routing-java-objects</module>
   </modules>
 
   <properties>
@@ -24,13 +25,26 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
 
-    <camel.version>3.11.3</camel.version>
+    <camel.version>3.14.2</camel.version>
     <log4j.version>2.13.3</log4j.version>
     <xmlunit.version>2.8.2</xmlunit.version>
   </properties>
 
   <build>
     <plugins>
+      <!-- plugins required to run junit5 tests -->
+      <!-- https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
