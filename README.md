@@ -1,7 +1,7 @@
 Apache Camel 3 Code Examples
 ============================
 
-Currently used Camel version: 3.11.3
+Currently used Camel version: 3.14.2
 
 All examples might not compile when the Camel version have been changed.
 
@@ -96,6 +96,7 @@ How to call paginated API for all pages and aggregates the results. Requires [st
 
 How to route arbitrary Java objects. Uses [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) to process every object in a Java container.
 
-```
-mvn compile exec:java
-```
+`011-simple`
+------------
+
+[Simple](https://camel.apache.org/components/latest/languages/simple-language.html) expression language examples.
