@@ -96,7 +96,12 @@ How to call paginated API for all pages and aggregates the results. Requires [st
 
 How to route arbitrary Java objects. Uses [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) to process every object in a Java container.
 
-`011-simple`
-------------
+`011-simple-expression-language`
+--------------------------------
 
 [Simple](https://camel.apache.org/components/latest/languages/simple-language.html) expression language examples.
+
+`012-xml-mangling`
+------------------
+
+XML example: get pieces from input XML and then use those to build a new XML with Saxon XSLT.

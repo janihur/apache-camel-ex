@@ -19,6 +19,7 @@
     <module>009-calling-paginated-api</module>
     <module>010-routing-java-objects</module>
     <module>011-simple-expression-language</module>
+    <module>012-xml-mangling</module>
   </modules>
 
   <properties>

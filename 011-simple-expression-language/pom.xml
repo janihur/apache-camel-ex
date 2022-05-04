@@ -28,6 +28,11 @@
             <artifactId>camel-timer</artifactId>
             <version>${camel.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-xpath</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
         <!-- OTHER -->
     </dependencies>
 </project>

@@ -14,8 +14,45 @@ public class Routes {
                     from("direct:mainRoute")
                     .routeId("MainRoute")
                         .log("MainRoute BEGINS: BODY: ")
+                        .to("direct:compare")
                         .to("direct:date")
                         .log("MainRoute ENDS: BODY: ")
+                    .end()
+                    ;
+
+                    from("direct:compare")
+                    .routeId("CompareRoute")
+                        .log("CompareRoute BEGINS:")
+                        // ----------------------------------------------------
+                        // strings work as expected
+                        .setProperty("A1").constant("FOO")
+                        .setProperty("B1").constant("FOO")
+                        .log("(A1 \"${exchangeProperty.A1}\")(B1 \"${exchangeProperty.B1}\")")
+                        .choice()
+                            .when(simple("${exchangeProperty.A1} == ${exchangeProperty.B1}"))
+                                .log("A1 equals B1")
+                            .otherwise()
+                                .log("A1 doesn't equals B1")
+                        .end()
+                        .removeProperties("*")
+                        // ----------------------------------------------------
+                        // xpath doesn't return (a Java) string as default so this won't work:
+                        // .setProperty("A2").xpath("/xml/a/text()")
+                        // https://camel.apache.org/components/3.14.x/languages/xpath-language.html#_setting_result_type
+                        .setBody(constant("<xml><a>FOO</a><b>FOO</b></xml>"))
+                        .setProperty("A2").xpath("/xml/a", String.class) // now the property is a Java string
+                        .setProperty("B2").xpath("/xml/b", String.class) // now the property is a Java string
+                        .log("(A2 \"${exchangeProperty.A2}\")(B2 \"${exchangeProperty.B2}\")")
+                        .choice()
+                            // now comparing strings
+                            .when(simple("${exchangeProperty.A2} == ${exchangeProperty.B2}"))
+                                .log("A2 equals B2")
+                            .otherwise()
+                                .log("A2 doesn't equals B2")
+                        .end()
+                        .removeProperties("*")
+                        // ----------------------------------------------------
+                        .log("CompareRoute ENDS:")
                     .end()
                     ;
 
