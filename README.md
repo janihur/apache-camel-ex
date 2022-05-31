@@ -105,3 +105,8 @@ How to route arbitrary Java objects. Uses [splitter](https://camel.apache.org/co
 ------------------
 
 XML example: get pieces from input XML and then use those to build a new XML with Saxon XSLT.
+
+`013-split`
+---------
+
+How to use [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) with `AggregationStrategy` that merges the results into Java `List`.
