@@ -21,6 +21,7 @@
     <module>011-simple-expression-language</module>
     <module>012-xml-mangling</module>
     <module>013-split</module>
+    <module>014-error-handling</module>
   </modules>
 
   <properties>

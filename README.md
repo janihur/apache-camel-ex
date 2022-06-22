@@ -110,3 +110,8 @@ XML example: get pieces from input XML and then use those to build a new XML wit
 ---------
 
 How to use [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) with `AggregationStrategy` that merges the results into Java `List`.
+
+`014-error-handling`
+------------------
+
+[Error handler](https://camel.apache.org/manual/error-handler.html) and [exception](https://camel.apache.org/manual/exception-clause.html) clause examples.
