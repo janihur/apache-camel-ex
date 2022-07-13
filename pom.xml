@@ -22,6 +22,7 @@
     <module>012-xml-mangling</module>
     <module>013-split</module>
     <module>014-error-handling</module>
+    <module>015-calling-java-from-route</module>
   </modules>
 
   <properties>

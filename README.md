@@ -125,3 +125,8 @@ mvn compile exec:java -Dexec.args=2
 ------------------
 
 [Error handler](https://camel.apache.org/manual/error-handler.html) and [exception](https://camel.apache.org/manual/exception-clause.html) clause examples.
+
+`015-calling-java-from-route`
+---------------------------
+
+A pattern how to combine the request and the response processor so that all the requests can be build up-front and then routed without branching logic.
