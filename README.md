@@ -94,7 +94,7 @@ How to call paginated API for all pages and aggregates the results. Requires [st
 `010-routing-java-objects`
 --------------------------
 
-How to route arbitrary Java objects. Uses [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) to process every object in a Java container.
+How to route arbitrary Java objects. Uses [Splitter](https://camel.apache.org/components/latest/eips/split-eip.html) EIP to process every object in a Java container.
 
 `011-simple-expression-language`
 --------------------------------
@@ -109,7 +109,17 @@ XML example: get pieces from input XML and then use those to build a new XML wit
 `013-split`
 ---------
 
-How to use [splitter](https://camel.apache.org/components/latest/eips/split-eip.html) with `AggregationStrategy` that merges the results into Java `List`.
+How to use [Splitter](https://camel.apache.org/components/latest/eips/split-eip.html) and [Filter](https://camel.apache.org/components/latest/eips/filter-eip.html) EIPs:
+
+1. with `AggregationStrategy` that merges the results into Java `List`.
+2. with [Multicast](https://camel.apache.org/components/latest/eips/multicast-eip.html) EIP.
+
+Run different cases with `-Dexec.args=` option:
+
+```
+mvn compile exec:java -Dexec.args=1
+mvn compile exec:java -Dexec.args=2
+```
 
 `014-error-handling`
 ------------------

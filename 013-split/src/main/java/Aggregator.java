@@ -21,7 +21,7 @@ public class Aggregator implements AggregationStrategy {
         // second and subsequent iterations
         // body of oldExchange is List<String>
         // body of newExchange is String
-        List<String> oldList = oldExchange.getMessage().getBody(List.class);
+        @SuppressWarnings("unchecked") List<String> oldList = oldExchange.getMessage().getBody(List.class);
         List<String> newList = buildListFrom(newExchange);
 
         List<String> combined = Stream.concat(oldList.stream(), newList.stream()).collect(Collectors.toList());
