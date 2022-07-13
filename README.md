@@ -36,7 +36,7 @@ $ curl http://0.0.0.0:8081/api101/hello
 `004-timer`
 -----------
 
-[Timer](https://camel.apache.org/components/latest/timer-component.html) scheduler component example.
+[Timer](https://camel.apache.org/components/latest/timer-component.html) scheduler component example where message body is set by [Bean](https://camel.apache.org/components/latest/bean-component.html) component.
 
 `005-xslt`
 ----------

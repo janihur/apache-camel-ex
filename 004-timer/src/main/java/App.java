@@ -23,17 +23,19 @@ public class App {
                 public void configure() {
                     // triggers on every 3 seconds
                     // https://camel.apache.org/components/latest/timer-component.html
-                    from("timer:exampleTimer?fixedRate=true&period=3s")
+                    from("timer:exampleTimer?fixedRate=true&period=3s&repeatCount=5")
                     .routeId("TimerRoute")
                     .log("ROUTE START:")
                     // https://camel.apache.org/components/latest/eips/setBody-eip.html
-                    .setBody(constant("HELLO FROM TIMER!"))
+                    .setBody()
+                    // https://camel.apache.org/components/latest/languages/bean-language.html
+                    .method(Foo.class, "foo")
                     .to("direct:savefile")
                     .log("ROUTE END:")
                     ;
                 }
             }
         );
-        main.run(args);
+        main.run(new String[]{"-duration", "15"});
     }
 }
