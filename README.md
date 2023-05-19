@@ -1,7 +1,7 @@
 Apache Camel 3 Code Examples
 ============================
 
-Currently used Camel version: 3.14.2
+Currently used Camel version: 3.18.5
 
 All examples might not compile when the Camel version have been changed.
 

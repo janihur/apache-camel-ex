@@ -20,9 +20,9 @@ public class App {
         main.configure().addRoutesBuilder(
             new RouteBuilder() {
                 public void configure() {
-                    // triggers on every 8 seconds after initial 5 seconds delay
+                    // triggers on every 8 seconds
                     // https://camel.apache.org/components/latest/quartz-component.html
-                    from("quartz://exampleTimer?startDelayedSeconds=5&cron=0/8+*+*+*+*+?")
+                    from("quartz://exampleTimer?cron=0/8+*+*+*+*+?")
                     .routeId("TimerRoute")
                     .log("ROUTE START:")
                     // https://camel.apache.org/components/latest/languages/bean-language.html
