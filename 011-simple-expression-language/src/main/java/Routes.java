@@ -16,6 +16,7 @@ public class Routes {
                         .log("MainRoute BEGINS: BODY: ")
                         .to("direct:compare")
                         .to("direct:date")
+                        .to("direct:emptyString")
                         .log("MainRoute ENDS: BODY: ")
                     .end()
                     ;
@@ -76,6 +77,29 @@ public class Routes {
                         .log("Date as Date object: ${date:now}")
                         // ---
                         .log("DateRoute ENDS:")
+                    .end()
+                    ;
+
+                    from("direct:emptyString")
+                    .routeId("EmptyStringRoute")
+                        .setBody(constant("<xml><a>FOO</a><b>BAR</b></xml>"))
+                        .log("EmptyStringRoute BEGINS: ${body}")
+                        .setProperty("A1").xpath("/xml/a", String.class) // now the property is a Java string
+                        .setProperty("A2").xpath("/xml/x", String.class) // now the property is a Java string
+                        .log("(A1 \"${exchangeProperty.A1}\")(A2 \"${exchangeProperty.A2}\")")
+                        .choice()
+                            .when(simple("${exchangeProperty.A1.isEmpty} == 'false'"))
+                                .log("String A1 is NOT empty")
+                            .otherwise()
+                                .log("String A1 is empty")
+                        .end()
+                        .choice()
+                            .when(simple("${exchangeProperty.A2.isEmpty}"))
+                                .log("String A2 is empty")
+                            .otherwise()
+                                .log("String A2 is NOT empty")
+                        .end()
+                        .log("EmptyStringRoute ENDS:")
                     .end()
                     ;
                 }
