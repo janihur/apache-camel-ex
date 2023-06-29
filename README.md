@@ -130,3 +130,8 @@ mvn compile exec:java -Dexec.args=2
 ---------------------------
 
 A pattern how to combine the request and the response processor so that all the requests can be build up-front and then routed without branching logic.
+
+`016-wiretap`
+-------------
+
+How to use [WireTap](https://camel.apache.org/components/eips/wireTap-eip.html) to route messages to alternative locations.

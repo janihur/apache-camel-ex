@@ -23,6 +23,7 @@
     <module>013-split</module>
     <module>014-error-handling</module>
     <module>015-calling-java-from-route</module>
+    <module>016-wiretap</module>
   </modules>
 
   <properties>
