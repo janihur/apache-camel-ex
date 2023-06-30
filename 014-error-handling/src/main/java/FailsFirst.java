@@ -4,7 +4,7 @@ import org.apache.camel.Processor;
 import java.time.LocalDateTime;
 
 /**
- *
+ * Fails first `failures` calls.
  */
 public class FailsFirst implements Processor {
     private int failuresLeft;

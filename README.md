@@ -121,8 +121,8 @@ mvn compile exec:java -Dexec.args=1
 mvn compile exec:java -Dexec.args=2
 ```
 
-`014-error-handling`
-------------------
+`014-error-handling` `014-error-handling-2`
+-------------------------------------------
 
 [Error handler](https://camel.apache.org/manual/error-handler.html) and [exception](https://camel.apache.org/manual/exception-clause.html) clause examples.
 
